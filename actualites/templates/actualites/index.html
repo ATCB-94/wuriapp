@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-header page-header-modern custom-page-header bg-color-quaternary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+                <h1 class="font-weight-bold text-9 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">Actualités</h1>
+            </div>
+            <div class="col-md-4 order-1 order-md-2 align-self-center">
+                <ul class="breadcrumb d-block text-md-end appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+                    <li><a href="/">ACCUEIL</a></li>
+                    <li class="active" style="color: #fff;">Actualités</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container pt-4 pb-5 my-5">
+    <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600">
+
+            {% for actu in page_obj %}
+            <article class="mb-5">
+                <div class="card bg-transparent border-0 custom-border-radius-1">
+                    <div class="card-body p-0 z-index-1">
+                        <a href="#" data-cursor-effect-hover="plus">
+                            <img class="card-img-top custom-border-radius-1 mb-2" src="/static/{{actu.image}}" alt="Card Image">
+                        </a>
+                        <p class="text-uppercase text-color-default text-1 my-2">
+                            <time pubdate datetime="2024-01-10"> {{ actu.date }}</time> 
+                            <span class="opacity-3 d-inline-block px-2">|</span> 
+                            3 Comments 
+                            <span class="opacity-3 d-inline-block px-2">|</span> 
+                            {{ actu.auteur }}
+                        </p>
+                        <div class="card-body p-0">
+                            <h4 class="card-title text-5 font-weight-bold pb-1 mb-2"><a class="text-color-dark text-color-hover-primary text-decoration-none" href="#"> {{ actu.titre_long|upper }}</a></h4>
+                            <p class="card-text mb-2"> {{ actu.contenu|truncatewords:24|safe }} </p>
+                            <a href="#" class="text-decoration-none custom-link-hover-effects">
+                                <span class="custom-view-more d-inline-flex font-weight-medium text-color-primary">
+                                    Lire la suite
+                                    <img width="27" height="27" src="/static/img/demos/business-consulting-3/icons/arrow-right.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary ms-2'}" style="width: 27px;" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+
+            <ul class="custom-pagination-style-1 pagination pagination-rounded pagination-md justify-content-center">
+              
+                {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link"  href="?page=1"><i class="fas fa-angle-left"></i></a></li>
+                <li class="page-item active"><a class="page-link"  href="?page={{ page_obj.previous_page_number }}">1</a></li>
+                {% endif %}
+                
+                {% if page_obj.has_next %}
+                <li class="page-item active"><a class="page-link"  href="?page={{  page_obj.next_page_number }}">2</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}"><i class="fas fa-angle-right"></i></a></li>
+                {% endif %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

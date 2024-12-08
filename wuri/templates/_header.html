@@ -1,0 +1,49 @@
+{% load static %}
+<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+    <div class="header-body border-top-0">
+        <div class="header-container container bg-color-light">
+            <div class="header-row">
+                <div class="header-column header-column-logo">
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <a href="index.html">
+                                <img alt="wuri" height="52" src="/static/img/demos/business-consulting-2/logos/logo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column header-column-nav-menu justify-content-end">
+                    <div class="header-row">
+                        <div class="header-nav header-nav-links order-2 order-lg-1">
+                            <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                                {% include "_nav.html" %}
+                            </div>
+                            <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column header-column-search justify-content-center align-items-end">
+                    <div class="header-nav-features">
+                        <div class="header-nav-feature header-nav-features-search d-inline-flex">
+                            <a href="#" class="header-nav-features-toggle" data-focus="headerSearch">
+                                <i class="fas fa-search header-nav-top-icon text-color-secondary text-3"></i>
+                            </a>
+                            <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed border-radius-0" id="headerTopSearchDropdown">
+                                <form role="search" action="../../../../external.html?link=https://www.okler.net/previews/porto/12.0.0/page-search-results.html" method="get">			
+                                    <div class="simple-search input-group">
+                                        <input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+                                        <button class="btn" type="submit" aria-label="Search">
+                                            <i class="fa fa-search header-nav-top-icon text-color-secondary"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,24 @@
+.our-blog .row {
+    overflow: hidden;
+    position: relative;
+}
+
+.our-blog .col-lg-6 {
+    min-width: 50%; /* Affiche deux articles à la fois */
+    flex: 0 0 auto; /* Assure que les articles restent en ligne */
+    transition: transform 0.5s ease; /* Adoucit l'effet */
+}
+
+.our-blog .carousel-container {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
