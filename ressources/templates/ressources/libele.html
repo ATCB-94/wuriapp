@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div role="main" class="main">
+    
+    <div id="examples">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <hr class="solid my-5">
+
+                    <h4>{{libe}}</h4>
+
+                    <div class="masonry-loader masonry-loader-showing">
+                        <div class="masonry row g-0" data-plugin-masonry data-plugin-options="{'itemSelector': '.masonry-item'}">
+                            {% for li in lib %}
+                            <div class="masonry-item no-default-style col-sm-3">
+                                <a href="/static/{{li.image}}" aria-label="">
+                                    <span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/static/{{li.image}}" class="img-fluid" alt="">
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12"><br><br>
+                    <hr style="background-color: #ffffff0c;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

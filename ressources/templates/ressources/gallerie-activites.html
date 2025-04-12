@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div role="main" class="main">
+    
+    <div class="container">
+
+        <div class="owl-carousel carousel-center-active-item-3 dots-modern mt-2 mb-0" style="max-height: 150px;" data-plugin-options="{'items': 1, 'loop': true, 'margin': 60, 'autoplay': true, 'autoplayTimeout': 4000}">
+            <div>
+                <div class="img-thumbnail border-0 p-0 pb-3 d-block">
+                    <img class="img-fluid border-radius-0" src="/static/img/wide/50.jpg" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="img-thumbnail border-0 p-0 pb-3 d-block">
+                    <img class="img-fluid border-radius-0" src="/static/img/wide1/38.jpg" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="img-thumbnail border-0 p-0 pb-3 d-block">
+                    <img class="img-fluid border-radius-0" src="/static/img/wide/007.JPG" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="img-thumbnail border-0 p-0 pb-3 d-block">
+                    <img class="img-fluid border-radius-0" src="/static/img/wide/48.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br><br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <br>
+            </div>
+        </div>
+
+        <div class="row pb-4">
+            <div class="col">
+                <hr class="solid my-5">
+
+                <br>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="examples" class="container  ">
+
+        <div class="row">
+
+            {% for activite in activites %} 
+            <div class="col-lg-6 mt-2">
+                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-show-more thumb-info-no-zoom">
+                    <span class="thumb-info-wrapper">
+                        <img src="/static/{{activite.image}}" class="img-fluid" alt="">
+                        <span class="thumb-info-title">
+                            <span class="thumb-info-inner line-height-1">
+                                <a href="gallerie-activites/{{activite.libele}}" style="text-decoration: none; color: #fff;">{{activite.libele}}</a>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <br><br>
+        </div>
+        <br><br>
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}

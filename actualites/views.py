@@ -2,6 +2,7 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.views import generic
 from .models import Post
+from ressources.models import Activite
 from django.core.paginator import Paginator
 
 
@@ -46,7 +47,7 @@ def index(request):
         }
     ]
 
-    paginator = Paginator(actualites, 2)  # Show 25 contacts per page.
+    paginator = Paginator(actualites, 2)  #Show 25 contacts per page.
 
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
@@ -55,7 +56,8 @@ def index(request):
 
 def home(request):
     articles = Post.objects.all()
-    context = {"articles": articles }
+    activites = Activite.objects.all()
+    context = {"articles": articles, "activites": activites }
 
     return render(request, 'actualites/home.html', context)
  

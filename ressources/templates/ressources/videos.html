@@ -1,0 +1,111 @@
+{% extends "base_video.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container py-4">
+
+    <div class="row">
+        <div class="col-8">
+            {% if lib  %}
+            <div id="revolutionSliderMediasContainer" class="rev_slider_wrapper mb-4" style="height: 724px;">
+                <div id="revolutionSliderMedias" class="rev_slider" data-version="5.4.8">
+                    <ul>
+                        {% for li in lib %}
+                        <li data-index="rs-106" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb='/static/{{li.image}}'  data-rotate="0"  data-saveperformance="off" data-title="" data-param1="{{li.libele}}" data-description="{{lib.description}}">
+                           
+                            <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
+                                data-x="0" 
+                                data-y="0" 
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-transform_idle="o:1;"
+                                data-style_hover="cursor:pointer;"
+                                data-transform_in="s:1000;e:Power1.easeInOut;" 
+                                data-transform_out="s:1000;s:1000;" 
+                                data-start="1000" 
+                                data-responsive_offset="on" 
+                                data-videocontrols="none"
+                                data-videowidth="100%"
+                                data-videoheight="100%"
+                                data-videoposter='/static/{{li.image}}'
+                                data-videomp4='/static/{{li.video}}'
+                                data-posterOnMObile="off"
+                                data-videopreload="auto"
+                                data-videoloop="none"
+                                data-forceCover="1"
+                                data-aspectratio="16:9"
+                                data-autoplay="on" 
+                                data-nextslideatend="true" 
+                                data-forcerewind="on"
+                                style="z-index: 5;">
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% else %}
+            <div id="revolutionSliderMediasContainer" class="rev_slider_wrapper mb-4" style="height: 724px;">
+                <div id="revolutionSliderMedias" class="rev_slider" data-version="5.4.8">
+                    <ul>
+                        <li data-index="rs-106" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb='/static/video/wuri.png'  data-rotate="0"  data-saveperformance="off" data-title="Aucune video" data-param1=" WURI CI " data-description="">
+                                    
+                            <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
+                                data-x="0" 
+                                data-y="0" 
+                                data-width="['auto']"
+                                data-height="['auto']"
+                                data-transform_idle="o:1;"
+                                data-style_hover="cursor:pointer;"
+                                data-transform_in="s:1000;e:Power1.easeInOut;" 
+                                data-transform_out="s:1000;s:1000;" 
+                                data-start="1000" 
+                                data-responsive_offset="on" 
+                                data-videocontrols="none"
+                                data-videowidth="100%"
+                                data-videoheight="100%"
+                                data-videoposter='/static/video/wuri.png'
+                                data-videomp4='/static/video/wuri.mp4'
+                                data-posterOnMObile="off"
+                                data-videopreload="auto"
+                                data-videoloop="none"
+                                data-forceCover="1"
+                                data-aspectratio="16:9"
+                                data-autoplay="on" 
+                                data-nextslideatend="true" 
+                                data-forcerewind="on"
+                                style="z-index: 5;">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-color-dark font-weight-normal text-5 mb-2"><strong class="font-weight-extra-bold">Activités</strong></h2>
+                    <ul class="list list-icons list-primary list-borders text-2">
+                        {% for activite in activites %}
+                            <li>
+                                <i class="fas fa-caret-right left-10"></i> 
+                                <strong class="text-color-primary"> </strong>
+                                <a href="/ressources/videos-activites/{{activite.id}}" style="text-decoration: none; color: #424242;">{{activite.libele}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <img src="/static/img/melsa/pub.png" style="width: 100%; border-radius: 10px;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

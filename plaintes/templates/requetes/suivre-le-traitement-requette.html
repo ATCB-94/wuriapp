@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div role="main" class="main">
+    <section class="page-header page-header-modern custom-page-header bg-color-quaternary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+                    <h1 class="font-weight-bold text-9 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">
+                       Suivre le traitement de votre plainte
+                    </h1>
+                </div>
+                <div class="col-md-4 order-1 order-md-2 align-self-center">
+                    <ul class="breadcrumb d-block text-md-end appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+                        <li><a href="#">Suivre le traitement de votre plainte</a></li>
+                        <li class="active" style="color: #fff;">Plaintes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container py-5">
+
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="row">
+                    <div class="col">
+
+                        <form class="custom-form-style-1 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="100" action="{% url 'recherche' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="form-group col-lg-10">
+                                    <input type="text" placeholder="Votre nom" value="" data-msg-required="Entrez votre nom." maxlength="100" class="form-control" name="nom" required>
+                                </div>
+
+                                <div class="form-group col-lg-2">
+                                    <button class="btn btn-primary btn-modern" style="height: 100%;" type="submit"><i class="fas fa-search header-nav-top-icon text-color-secondary text-3"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              
+
+                {% if plaintes %}
+                <div class="row">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Non du plaignant</th>
+                                        <th>Objet</th>
+                                        <th>Statut de la plainte</th>
+                                        <th>Date de dépôt</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for plainte in plaintes %}
+                                    <tr>
+                                        <td>{{ plainte.nom }}</td>
+                                        <td>{{ plainte.objet }}</td>
+                                        <td>{{ plainte.traitement }}</td>
+                                        <td>{{ plainte.created_on }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+                {% endif %}
+
+            </div>
+            <div class="col-lg-4">
+                {% include "_pub.html" %}
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}

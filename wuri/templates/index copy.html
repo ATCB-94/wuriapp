@@ -1,0 +1,596 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  
+<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 120, 'stickyHeaderContainerHeight': 70}">
+    <div class="header-body border-top-0">
+        <div class="header-top header-top-default header-top-borders border-bottom-0 bg-color-light">
+            <div class="" style="width: 100% !important; padding-left: 50px; padding-right: 50px;">
+                <div class="header-row h-100">
+                    <div class="header-column justify-content-between">
+                        <div class="header-row">
+                            <nav class="header-nav-top w-100">
+                                <ul class="nav nav-pills justify-content-between w-100 h-100">
+
+                                    <li class="nav-item nav-item-header-top-socials d-none d-md-flex justify-content-between h-100">
+                                        <img width="50%" src='{% static "img/demos/business-consulting-2/ci.jpeg" %}' alt="republique de cote d'ivoire">
+                                    </li>
+                                    <li class="nav-item py-2 d-inline-flex ">
+                                        <span class="header-top-phone py-2 d-flex align-items-center text-color-secondary font-weight-semibold text-uppercase">
+                                            <span>
+                                                <img width="15" height="18" src='{% static "img/demos/business-consulting-2/icons/phone.svg" %}' alt="Phone">
+                                            </span>
+                                            <a class="text-color-secondary text-color-hover-primary text-decoration-none" href="tel:002252722598621">(+225)  27 22 59 86 21</a>
+                                        </span>
+                                        <span class="header-top-email px-0 font-weight-normal align-items-center d-none d-xl-flex">
+                                            <span>
+                                                <img width="25" height="18" src='{% static "img/demos/business-consulting-2/icons/mail.svg" %}' alt="Mail">
+                                            </span>
+                                            <a class="text-color-secondary text-color-hover-primary text-decoration-none" href="../../../../external.html?link=https://www.okler.net/cdn-cgi/l/email-protection#21435452484f44525261514e53554e5549444c440f424e4c"><span class="__cf_email__" data-cfemail="1d7f686e7473786e6e5d6d726f69726975787078337e7270">info@wuri.ci</span></a>
+                                        </span>
+                                        <span class="header-top-opening-hours px-0 font-weight-normal align-items-center text-color-secondary d-none d-xl-flex">
+                                            <span>
+                                                <img width="19" height="18" src='{% static "img/demos/business-consulting-2/icons/map-pin.svg" %}' alt="Calendar">
+                                            </span>
+                                            Cocody les II plateaux, 7eme tranche, ilot 232, lot 3317 bis
+                                        </span>
+                                    </li>
+                                    <li class="nav-item nav-item-header-top-socials d-none d-md-flex justify-content-between h-100">
+                                         
+                                    </li>
+                                    <li class="nav-item nav-item-header-top-socials d-none d-md-flex justify-content-between h-100">
+                                        <img width="65" src='{% static "img/demos/business-consulting-2/meps.png" %}' alt="Phone">
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-10">
+                                <marquee behavior="" direction="" style="height: 30.5px; line-height: 30.5px; text-align: center;">
+                                    <a href="atelier-de-partage.html">Projet WURI en Afrique de l’ouest : des pays membres participent à un atelier de partage et des bonnes pratiques à Abidjan</a>
+                                </marquee>
+                            </div>
+                            <div class="col-2" style="background-color: #fe680a; color: #fff; text-align: center; height: 30.5px; line-height: 30.5px; text-align: center;">
+                                Flash info
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-container container bg-color-light">
+
+            <div class="header-row">
+                <div class="header-column header-column-logo">
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img alt="wuri" height="72" src='{% static "img/demos/business-consulting-2/logos/logo.png" %}'>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column header-column-nav-menu justify-content-end">
+                    <div class="header-row">
+                        <div class="header-nav header-nav-links order-2 order-lg-1" style="justify-content: flex-start !important;" >
+                            <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                                
+
+                                {% include "_nav.html" %}
+
+
+                            </div>
+                            <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column header-column-search justify-content-center align-items-end">
+                    <div class="header-nav-features">
+                        <div class="header-nav-feature header-nav-features-search d-inline-flex">
+                            <a href="#" class="header-nav-features-toggle" data-focus="headerSearch">
+                                <i class="fas fa-search header-nav-top-icon text-color-secondary text-3"></i>
+                            </a>
+                            <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed border-radius-0" id="headerTopSearchDropdown">
+                                <form role="search" action="../../../../external.html?link=https://www.okler.net/previews/porto/12.0.0/page-search-results.html" method="get">			
+                                    <div class="simple-search input-group">
+                                        <input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+                                        <button class="btn" type="submit" aria-label="Search">
+                                            <i class="fa fa-search header-nav-top-icon text-color-secondary"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-column header-column-search justify-content-center align-items-end">
+                    <select class="custom-select" id="inputGroupSelect02" style="background-color: var(--secondary); color: #fff; padding: 3px;">
+                        <option selected>FR</option>
+                        <option value="1">EN</option>
+                      </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div role="main" class="main">
+    <div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover show-dots-xs show-dots-sm show-dots-md nav-style-1 nav-inside nav-inside-plus nav-dark nav-lg nav-font-size-lg show-nav-hover bg-color-quaternary custom-slider-container mb-0" data-plugin-options="{'autoplay': true, 'autoplayTimeout': 7000}"  style="height: 691px;">
+        <div class="owl-stage-outer">
+            <div class="owl-stage">
+                    
+                <!-- Carousel Slide 1 -->
+                <div class="owl-item position-relative overflow-hidden">
+                    <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url('/static/img/demos/business-consulting-2/slides/1.png'); background-size: cover; background-position: center;"></div>
+                    <div class="container position-relative z-index-3 pb-5 h-100">
+                        <div class="row justify-content-center justify-content-lg-start align-items-center pb-5 h-100">
+                            <div class="col-sm-9 col-lg-7 text-center text-lg-start pb-5 mb-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Slide 2 -->
+                <div class="owl-item position-relative overflow-hidden">
+                    <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToRight" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(/static/img/demos/business-consulting-2/slides/3.png); background-size: cover; background-position: center;"></div>
+                    <div class="container position-relative z-index-3 pb-5 h-100">
+                        <div class="row align-items-center justify-content-center justify-content-lg-end pb-5 h-100">
+                            <div class="col-sm-9 col-lg-7 text-center text-lg-start pb-5 mb-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Slide 3 -->
+                <div class="owl-item position-relative overflow-hidden">
+                    <div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToRight" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(/static/img/demos/business-consulting-2/slides/2.png); background-size: cover; background-position: center;"></div>
+                    <div class="container position-relative z-index-3 pb-5 h-100">
+                        <div class="row align-items-center justify-content-center justify-content-lg-end pb-5 h-100">
+                            <div class="col-sm-9 col-lg-7 text-center text-lg-start pb-5 mb-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="owl-nav">
+            <button type="button" role="presentation" class="owl-prev" aria-label="Previous"></button>
+            <button type="button" role="presentation" class="owl-next" aria-label="Next"></button>
+        </div>
+    </div>
+
+    <section class="bg-color-light p-relative z-index-2">
+        <div class="cards custom-cards custom-cards-slider h-auto pt-5 pb-4 container appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
+            <div class="row bg-color-light cards-container d-flex justify-content-center justify-content-xl-between w-100 mb-5 mx-0 box-shadow-1 p-relative top-0">
+                <div class="col-sm-12 col-md-6 col-xl-4 bg-light p-0 shadow-none">
+                    <div class="card border-radius-0 border-0 shadow-none">
+                        <div class="card-body d-flex align-items-center justify-content-between flex-column z-index-1">
+                            <img src="/static/img/demos/business-consulting-2/icons/financial.png" alt="une inclusion complète" class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100"><a href="presentation/composant-01/">
+                            <h4 class="card-title mb-1 font-weight-semibold text-color-secondary appear-animation" style="text-align: center;" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">Renforcement du cadre juridique et institutionnel</h4></a>
+                            <p class="card-text text-center pt-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"><br> Elle porte sur la préparation, le développement et la mise en œuvre du cadre juridique et institutionnel nécessaire pour structurer des systèmes d'identification de base fiables. <br><br></p>
+                            
+                            <span class="font-weight-bold text-uppercase text-decoration-non text-primary mt-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"><a href="presentation/composant-01/">Composante 1</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-xl-4 bg-light p-0 shadow-none">
+                    <div class="card border-radius-0 border-0 shadow-none">
+                        <div class="card-body d-flex align-items-center justify-content-between flex-column z-index-1">
+                            <img src="/static/img/demos/business-consulting-2/icons/strategic.png" alt="identification fiable et inclusive" class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500"><a href="presentation/composant-02/">
+                            <h4 class="card-title mb-1 font-weight-semibold text-color-secondary appear-animation" style="text-align: center;" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">Enrolement de masse et mise en place d’un système d’identification solide et inclusif</h4></a>
+                            <p class="card-text text-center pt-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Elle soutient la création de systèmes d'identification de base axés sur la mise en place du fID liés à des données biométriques, qui seront collectées conformément aux normes de qualité internationales.</p>
+                            <span class="font-weight-bold text-uppercase text-decoration-non text-primary mt-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"><a href="presentation/composant-02/">Composante 2</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-xl-4 bg-light p-0 shadow-none">
+                    <div class="card border-radius-0 border-0 shadow-none">
+                        <div class="card-body d-flex align-items-center justify-content-between flex-column z-index-1 border-end-0">
+                            <img src="/static/img/demos/business-consulting-2/icons/cash.png" alt="L'accès aux services pour tous" class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900"><a href="presentation/composant-03/">
+                            <h4 class="card-title mb-1 font-weight-semibold text-color-secondary appear-animation" style="text-align: center;" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">Facilitation de l’accès aux services à travers un identifiant unique</h4></a>
+                            <p class="card-text text-center pt-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1100"><br> Elle met l'accent sur la prestation de services, l’application effective du fID au niveau national. <br><br><br><br></p>
+                            <span class="font-weight-bold text-uppercase text-decoration-none text-primary mt-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200"><a href="presentation/composant-03/">Composante 3</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+
+            <section class="our-services d-flex p-relative z-index-1 bg-color-light lazyload" style="background-size: 60%; min-height: 550px;" data-bg-src="/static/img/melsa/021.JPG">
+                <div class="col-img-our-services p-absolute overflow-hidden w-50 h-100"></div>
+                <div class="container">
+                    <div class="row justify-content-end align-items-center h-100">
+                        <div class="col-lg-5 position-relative bg-color-light z-index-1 col-our-services-text">
+                            <h2 class="text-color-secondary font-weight-bold mb-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">Mot du Ministre</h2>
+                            <p class="text-uppercase font-weight-semibold mb-1 text-color-primary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100"><span class="line-pre-title bg-color-primary"></span> Maître Adama KAMARA <br> Ministre de l’Emploi et de la Protection Sociale</p>
+                            
+                            <p class="font-weight-semibold mb-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">L’accès aux services sociaux de base pour l’ensemble des populations, y compris les plus démunies, reste un défi important auquel la Côte d’Ivoire, avec à sa tête le Président de la République, SEM. Alassane OUATTARA, fait face à travers plusieurs projets et programmes. </p>
+                            <p class="mb-4 pb-2 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="400">Au nombre de ceux-ci figure le Projet d’Identification Unique pour l’Intégration Régionale et l’Inclusion en Afrique de l’Ouest (WURI) Côte d’Ivoire...</p>
+                            
+
+                            <a href="presentation/mot-du-ministre/" class="btn btn-primary custom-btn text-center text-uppercase text-decoration-none border-0 py-0 px-5 font-weight-semibold mt-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600">LIRE LA SUITE</a>
+                        </div>	
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-5 col-sm-12" style="min-height: 100%; background-color: rgba(0, 109, 137, 0.3);">
+            <div class="container">
+                <div class="row justify-content-end align-items-center h-100">
+                    <div class="col-lg-12 p-4"><br><br>
+                        <p class="text-uppercase font-weight-semibold mb-1 text-color-primary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100"><span class="line-pre-title bg-color-primary"></span> Projet WURI COTE D'IVOIRE</p>
+                        <h2 class="font-weight-bold  mb-4 appear-animation" style="color: #fff;" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">QUELQUES CHIFFRES CLÉS</h2>
+                        <br><br>
+                        <div class="container counters custom-counters d-flex">
+                            <div class="counter counter-primary appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">
+                                <strong data-to="29" data-append=" millions Habitants">0</strong>
+                                <label style="color: #fff;" class="font-weight-bold">Population cible</label>
+                            </div>
+                            <div class="counter counter-primary appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">
+                                <strong data-to="35" data-append=" milliards francs CFA">0</strong>
+                                <label style="color: #fff;" class="font-weight-bold">Financement du projet</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 "></div>
+                    <div class="col-lg-8 p-4">
+                        <div class="d-flex align-items-center justify-content-start appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="600">
+                            <div class="circular-bar custom-circular-bar m-0">
+                                <div class="circular-bar-chart" data-percent="31" data-plugin-options="{'barColor': '#E29623A8'}">
+                                    <strong class="text-5 " style="color: #fff;">31%</strong>
+                                </div>
+                            </div>
+                            <h4 class="font-weight-bold  m-0 ms-3" style="color: #fff;">Taux de <br/>décaissement.</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <br><br>
+
+    <!--aticles
+    <section class="section bg-transparent border-0 position-relative py-0 m-0">
+        <div class="container container-xl-custom custom-container-style custom-margin-top">
+
+            <div class="row mt-3 pt-5">
+                <div class="col">
+                    <p class="text-uppercase font-weight-semibold mb-1 text-color-primary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100"><span class="line-pre-title bg-color-primary"></span>Restez informé</p>
+                    <h2 class="text-color-secondary font-weight-bold mb-4 custom-letter-spacing-2 custom-text-1 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">Actualités et événements</h2>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="overflow-hidden">
+                        <div class="owl-carousel-wrapper position-relative z-index-1 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1000" style="height: 373px;">
+                            <div class="owl-carousel owl-theme dots-horizontal-center custom-dots-style-1 mb-0" data-plugin-options="{'responsive': {'576': {'items': 1}, '768': {'items': 1}, '992': {'items': 2}, '1200': {'items': 3}}, 'margin': 25, 'loop': true, 'nav': false, 'dots': true, 'autoplay': true, 'autoplayTimeout': 7000}">
+                                <div>
+                                    <a href="#" class="text-decoration-none">
+                                        <div class="card custom-card-style-1 border-radius-0">
+                                            <div class="card-body text-center p-5 mb-4">
+                                                <a href="#">
+                                                    <img class="card-img-top border-radius-0" src="img/melsa/36.JPG" alt="Card Image" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-3 mb-4 pb-3'}" >
+                                                </a>
+                                                <p class="text-uppercase text-1 mb-3 pt-1 text-color-default"><time pubdate datetime="2024-01-10">10 Jan 2024</time> <span class="opacity-3 d-inline-block px-2">|</span> Wuri COTE D'IVOIRE</p>
+                                                <div class="card-body p-0">
+                                                    <h4 class="card-title mb-3 text-5 font-weight-bold"><a class="text-color-secondary" href="#">Atelier CNAM avec le corps préfectoral 13 septembre 2024</a></h4>
+                                                    <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem ipsum erat orci, ac auctor lacus tincidunt ut...</p>
+                                                    <a href="#" class="font-weight-bold text-uppercase text-decoration-none d-block mt-3">Voir plus</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="text-decoration-none">
+                                        <div class="card custom-card-style-1 border-radius-0">
+                                            <div class="card-body text-center p-5 mb-4">
+                                                <a href="#" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-3 mb-4 pb-3'}">
+                                                    <img class="card-img-top border-radius-0" src="img/melsa/20.JPG" alt="Card Image">
+                                                </a>
+                                                <p class="text-uppercase text-1 mb-3 pt-1 text-color-default"><time pubdate datetime="2024-01-10">10 Jan 2024</time> <span class="opacity-3 d-inline-block px-2">|</span> WURI COTE D'IVOIRE</p>
+                                                <div class="card-body p-0">
+                                                    <h4 class="card-title mb-3 text-5 font-weight-bold"><a class="text-color-secondary" href="#">Atelier régional des projets WURI 6, 7 et 8 mai 2024</a></h4>
+                                                    <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem ipsum erat orci, ac auctor lacus tincidunt ut...</p>
+                                                    <a href="#" class="font-weight-bold text-uppercase text-decoration-none d-block mt-3">Voir plus</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="text-decoration-none">
+                                        <div class="card custom-card-style-1 border-radius-0">
+                                            <div class="card-body text-center p-5 mb-4">
+                                                <a href="#" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-3 mb-4 pb-3'}">
+                                                    <img class="card-img-top border-radius-0" src="img/melsa/54.jpg" alt="Card Image">
+                                                </a>
+                                                <p class="text-uppercase text-1 mb-3 pt-1 text-color-default"><time pubdate datetime="2024-01-10">10 Jan 2024</time> <span class="opacity-3 d-inline-block px-2">|</span> WURI COTE D'IVOIRE</p>
+                                                <div class="card-body p-0">
+                                                    <h4 class="card-title mb-3 text-5 font-weight-bold"><a class="text-color-secondary" href="#">Participation du projet WURI a l'AIDE 2024</a></h4>
+                                                    <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem ipsum erat orci, ac auctor lacus tincidunt ut...</p>
+                                                    <a href="#" class="font-weight-bold text-uppercase text-decoration-none d-block mt-3">Voir plus</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="text-decoration-none">
+                                        <div class="card custom-card-style-1 border-radius-0">
+                                            <div class="card-body text-center p-5 mb-4">
+                                                <a href="#" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-3 mb-4 pb-3'}">
+                                                    <img class="card-img-top border-radius-0" src="img/melsa/37.jpg" alt="Card Image">
+                                                </a>
+                                                <p class="text-uppercase text-1 mb-3 pt-1 text-color-default"><time pubdate datetime="2024-01-10">10 Jan 2024</time> <span class="opacity-3 d-inline-block px-2">|</span> WURI COTE D'IVOIRE</p>
+                                                <div class="card-body p-0">
+                                                    <h4 class="card-title mb-3 text-5 font-weight-bold"><a class="text-color-secondary" href="#">Signature de la convention CNAM-Projet WURI 23 janvier 2024</a></h4>
+                                                    <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem ipsum erat orci, ac auctor lacus tincidunt ut...</p>
+                                                    <a href="#" class="font-weight-bold text-uppercase text-decoration-none d-block mt-3">Voir plus</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <br><br><br>
+
+
+    <div class="bg-grey-400 py-5 my-5">
+        <div class="container">
+
+            <div class="row mt-3 pt-5">
+                <div class="col">
+                    <p class="text-uppercase font-weight-semibold mb-1 text-color-primary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100"><span class="line-pre-title bg-color-primary"></span>Restez informé</p>
+                    <h2 class="text-color-secondary font-weight-bold mb-4 custom-letter-spacing-2 custom-text-1 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">Actualités et événements</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-half-full-width-wrapper carousel-half-full-width-right">
+                        <div class="owl-carousel owl-theme carousel-half-full-width-right nav-bottom nav-bottom-align-left nav-lg nav-transparent nav-borders-light nav-arrow-light rounded-nav mb-2" data-plugin-options="{'responsive': {'0': {'items': 1}, '768': {'items': 3}, '992': {'items': 4}, '1200': {'items': 4}}, 'loop': true, 'nav': true, 'dots': false, 'margin': 20}">
+                            <div>
+                                <div class="box-shadow-1">
+                                    <span class="thumb-info thumb-info-no-overlay thumb-info-show-hidden-content-hover">
+                                        <span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content border-radius-0 rounded-top">
+                                            <img src="/static/img/melsa/20.JPG" class="img-fluid" alt="">
+                                        </span>											
+                                        <span class="thumb-info-content">
+                                            <span class="thumb-info-content-inner bg-light p-4">
+                                                <h4 class="mb-2">Atelier regional WURI</h4>
+                                                <p class="line-height-7 mb-0">A l’occasion d’un atelier sur la revue du Projet d’identification</p>
+                                                <span class="thumb-info-content-inner-hidden p-absolute d-block w-100 py-3">
+                                                    <a href="/actualites/2/" class="text-uppercase font-weight-semibold text-decoration-underline">Lire</a>
+                                                    <a href="/actualites/2/" class="btn btn-light btn-rounded box-shadow-7 btn-xl border-0 text-3 p-0 btn-with-arrow-solid p-absolute right-0 transform3dx-n100 bottom-7"><span class="p-static bg-transparent transform-none"><i class="fa-solid fa-arrow-right text-dark"></i></span></a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="box-shadow-1">
+                                    <span class="thumb-info thumb-info-no-overlay thumb-info-show-hidden-content-hover">
+                                        <span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content border-radius-0 rounded-top">
+                                            <img src="/static/img/melsa/7.JPG" class="img-fluid" alt="">
+                                        </span>											
+                                        <span class="thumb-info-content">
+                                            <span class="thumb-info-content-inner bg-light p-4">
+                                                <h4 class="mb-2"> Atelier bilan WURI</h4>
+                                                <p class="line-height-7 mb-0">Le Projet WURI Côte d’Ivoire dresse le bilan de ses activités.</p>
+                                                <span class="thumb-info-content-inner-hidden p-absolute d-block w-100 py-3">
+                                                    <a href="/actualites/3/" class="text-uppercase font-weight-semibold text-decoration-underline">Lire</a>
+                                                    <a href="/actualites/3/" class="btn btn-light btn-rounded box-shadow-7 btn-xl border-0 text-3 p-0 btn-with-arrow-solid p-absolute right-0 transform3dx-n100 bottom-7"><span class="p-static bg-transparent transform-none"><i class="fa-solid fa-arrow-right text-dark"></i></span></a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="box-shadow-1">
+                                    <span class="thumb-info thumb-info-no-overlay thumb-info-show-hidden-content-hover">
+                                        <span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content border-radius-0 rounded-top">
+                                            <img src="/static/img/melsa/6.JPG" class="img-fluid" alt="">
+                                        </span>											
+                                        <span class="thumb-info-content">
+                                            <span class="thumb-info-content-inner bg-light p-4">
+                                                <h4 class="mb-2">Atelier de partage</h4>
+                                                <p class="line-height-7 mb-0">Des représentants de pays de l’Afrique de l’Ouest participent</p>
+                                                <span class="thumb-info-content-inner-hidden p-absolute d-block w-100 py-3">
+                                                    <a href="/actualites/4/" class="text-uppercase font-weight-semibold text-decoration-underline">Lire</a>
+                                                    <a href="/actualites/4/" class="btn btn-light btn-rounded box-shadow-7 btn-xl border-0 text-3 p-0 btn-with-arrow-solid p-absolute right-0 transform3dx-n100 bottom-7"><span class="p-static bg-transparent transform-none"><i class="fa-solid fa-arrow-right text-dark"></i></span></a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="box-shadow-1">
+                                    <span class="thumb-info thumb-info-no-overlay thumb-info-show-hidden-content-hover">
+                                        <span class="thumb-info-wrapper overlay overlay-show overlay-gradient-bottom-content border-radius-0 rounded-top">
+                                            <img src="/static/img/melsa/50.jpg" class="img-fluid" alt="">
+                                        </span>											
+                                        <span class="thumb-info-content">
+                                            <span class="thumb-info-content-inner bg-light p-4">
+                                                <h4 class="mb-2">Participation au WURI APIDE 2024</h4>
+                                                <p class="line-height-7 mb-0">Une délégation du Projet</p>
+                                                <span class="thumb-info-content-inner-hidden p-absolute d-block w-100 py-3">
+                                                    <a href="/actualites/5/" class="text-uppercase font-weight-semibold text-decoration-underline">Lire</a>
+                                                    <a href="/actualites/5/" class="btn btn-light btn-rounded box-shadow-7 btn-xl border-0 text-3 p-0 btn-with-arrow-solid p-absolute right-0 transform3dx-n100 bottom-7"><span class="p-static bg-transparent transform-none"><i class="fa-solid fa-arrow-right text-dark"></i></span></a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <br>
+    <section class="are-you-looking-for bg-color-secondary">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-8">
+                    <p class="text-uppercase font-weight-semibold mb-1 text-color-light appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100"><span class="line-pre-title bg-color-primary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200"></span>Gestion des plaintes </p>
+                    <h2 class="text-color-light font-weight-bold  mb-1 letter-spacing-08 font-size-32 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">Une préoccupation liée au projet WURI ? </h2>
+                    <p class="font-weight-semibold text-color-light mb-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">	N’hésitez pas à nous contacter par <span class="text-primary" title="(+225) 27 22 59 86 21">téléphone</span>, <span class="text-primary" title="info@wuri.ci">mail</span>, mobile ou sur notre site Web</p>
+                </div>
+                <div class="col-xl-4 d-flex align-items-start align-items-sm-center justify-content-start justify-content-xl-end mt-4 mt-xl-0 flex-column flex-sm-row">
+                    <span class="are-you-looking-for-phone py-2 d-flex align-items-center text-color-light font-weight-semibold text-uppercase text-4 mb-4 mb-md-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500">
+                        <a href="#" class="btn btn-primary">Soumettre une requête</a>
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--temoignages-->
+
+    <br><br>
+
+    <div class="bg-grey-100 my-5">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col">
+                    <h4 class="mt-5 Témoignage"></h4>
+
+                    <div class="owl-carousel owl-theme nav-bottom nav-lg nav-transparent nav-borders rounded-nav" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 3}, '1199': {'items': 3}}, 'margin': 20, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 0}">
+                        <div class="py-4">
+                            <div class="card border-radius-2 bg-color-light border-0 box-shadow-10">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                                        <div class="author">
+                                            <h4 class="text-5 mb-0">Brice YAO</h4>
+                                            <span class="opacity-7">Developpeur JAVA</span>
+                                        </div>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus nulla dui, in dapi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="card border-radius-2 bg-color-light border-0 box-shadow-10">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                                        <div class="author">
+                                            <h4 class="text-5 mb-0">Olivier DIALLO</h4>
+                                            <span class="opacity-7">Journaliste</span>
+                                        </div>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus nulla dui, in dapi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="card border-radius-2 bg-color-light border-0 box-shadow-10">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                                        <div class="author">
+                                            <h4 class="text-5 mb-0">Cedric BOUA</h4>
+                                            <span class="opacity-7">Developpeur JAVA</span>
+                                        </div>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus nulla dui, in dapi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="card border-radius-2 bg-color-light border-0 box-shadow-10">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                                        <div class="author">
+                                            <h4 class="text-5 mb-0">Eunice DIA</h4>
+                                            <span class="opacity-7">Infographe</span>
+                                        </div>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus nulla dui, in dapi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="card border-radius-2 bg-color-light border-0 box-shadow-10">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                                        <div class="author">
+                                            <h4 class="text-5 mb-0">Ange BEUGRE</h4>
+                                            <span class="opacity-7">Developpeur Python</span>
+                                        </div>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus nulla dui, in dapi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <br>
+    <section class="are-you-looking-for bg-color-secondary">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-6">
+                    <p class="text-uppercase font-weight-semibold mb-1 text-color-light appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100"><span class="line-pre-title bg-color-primary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200"></span>NEWSLETTER</p>
+                    <h2 class="text-color-light font-weight-bold  mb-1 letter-spacing-08 font-size-32 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">Inscrivez-vous à notre newsletter</h2>
+                    <p class="font-weight-semibold text-color-light mb-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">	
+                    </p>
+                </div>
+                <div class="col-xl-6 d-flex align-items-start align-items-sm-center justify-content-start justify-content-xl-end mt-4 mt-xl-0 flex-column flex-sm-row">
+                    <span class="are-you-looking-for-phone py-2 d-flex align-items-center text-color-light font-weight-semibold text-uppercase text-4 mb-4 mb-md-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500">
+                        <form action="">
+                            <input type="text" class="form-control" placeholder="Votre email...">
+                        </form>
+                    </span>
+                    <a href="#" class="btn btn-primary custom-btn text-center text-uppercase text-decoration-none border-0 py-0 px-5 font-weight-semibold appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="600">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+{% include "_footer.html" %}
+
+
+{% endblock %}

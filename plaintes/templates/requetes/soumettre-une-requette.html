@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div role="main" class="main">
+    <section class="page-header page-header-modern custom-page-header bg-color-quaternary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+                    <h1 class="font-weight-bold text-9 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">
+                       Soumettre une plainte
+                    </h1>
+                </div>
+                <div class="col-md-4 order-1 order-md-2 align-self-center">
+                    <ul class="breadcrumb d-block text-md-end appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+                        <li><a href="#">Soumettre une plainte</a></li>
+                        <li class="active" style="color: #fff;">Plaintes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <p class="text-uppercase font-weight-semibold mb-1 text-color-primary appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100"><span class="line-pre-title bg-color-primary"></span> </p>
+                <h2 class="text-color-secondary font-weight-bold mb-2 custom-letter-spacing-2 custom-text-1 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">Envoyez-nous votre plainte</h2>
+                <p class="mb-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300"></p>
+
+                <form class="custom-form-style-1 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="100" action="{% url 'add_plainte' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="contact-form-success alert alert-success d-none mt-4">
+                        <strong>Success!</strong> Your message has been sent to us.
+                    </div>
+
+                    <div class="contact-form-error alert alert-danger d-none mt-4">
+                        <strong>Error!</strong> There was an error sending your message.
+                        <span class="mail-error-message text-1 d-block"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <input type="text" placeholder="Votre nom" value="" data-msg-required="Entrez votre nom." maxlength="100" class="form-control" name="nom" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <input type="email" placeholder="Votre E-mail" value="" data-msg-required="Entrez votre email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <input placeholder="Objet" type="text" value="" data-msg-required="Entrez votre objet." maxlength="100" class="form-control" name="objet" required>
+                        </div>
+
+                        <div class="form-group col">
+                            <input placeholder="+225 27 22 59 86 21" type="tel" value="" data-msg-required="Entrez votre numero de telephone" maxlength="100" class="form-control" name="telephone" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <textarea placeholder="Votre Message..." maxlength="5000" data-msg-required="Entrez votre message." rows="10" class="form-control" name="message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <input type="submit" value="Envoyer" class="btn btn-primary custom-btn text-center text-uppercase text-decoration-none border-0 py-0 px-5 font-weight-semibold" data-loading-text="Loading...">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

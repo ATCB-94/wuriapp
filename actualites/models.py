@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import pre_delete
+from tinymce import models as tinymce_models
 import os
 
 # Create your models here.
@@ -14,7 +15,7 @@ class Post(models.Model):
     auteur = models.ForeignKey(User , on_delete=models.CASCADE, related_name='blog_post')
     created_on = models.DateTimeField(auto_now_add=True)
     update_on = models.DateTimeField(auto_now=True)
-    contenu = models.TextField()
+    contenu = tinymce_models.HTMLField(null=True)
     statut = models.IntegerField(choices=STATUS, default=0)
     image = models.ImageField(upload_to='article_images', null=True, blank=True)
 

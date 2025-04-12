@@ -65,6 +65,27 @@
             </ul>
 
         </div>
+        <div class="col-lg-4 mb-5" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-color-dark font-weight-normal text-5 mb-2"><strong class="font-weight-extra-bold">Activités</strong></h2>
+                    <ul class="list list-icons list-primary list-borders text-2">
+                        {% for article in articles %}
+                            <li>
+                                <i class="fas fa-caret-right left-10"></i> 
+                                <strong class="text-color-primary"> </strong>
+                                <a href="/actualites/{{article.id}}" class="text-decoration-none custom-link-hover-effects" style="color: rgba(73, 73, 73, 0.877);">
+                                    {{article.titre|upper}}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <img src="/static/img/melsa/pub.png" style="width: 100%; border-radius: 10px;" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

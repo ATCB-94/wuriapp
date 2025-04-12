@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div role="main" class="main">
+    <section class="page-header page-header-modern custom-page-header bg-color-quaternary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+                    <h1 class="font-weight-bold text-9 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="100">
+                       Glossaire
+                    </h1>
+                </div>
+                <div class="col-md-4 order-1 order-md-2 align-self-center">
+                    <ul class="breadcrumb d-block text-md-end appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+                        <li><a href="#">Glossaire</a></li>
+                        <li class="active" style="color: #fff;">Plaintes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container py-5">
+
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-success d-none" id="newsletterSuccess">
+                            <strong>Success!</strong> You've been added to our email list.
+                        </div>
+                        <div class="alert alert-danger d-none" id="newsletterError"></div>
+                        <form  action="{% url 'rech_glossaire' %}" method="POST" class="mw-100" >
+                            {% csrf_token %}
+                            <div class="input-group input-group-rounded has-danger">
+                                <input class="form-control form-control-sm bg-light px-4 text-3 is-invalid" placeholder="Le terme recherché..." name="terme" id="newsletterEmail" type="texte" aria-invalid="true">
+                                <button class="btn btn-primary  text-color-light text-2 py-3 px-4" type="submit"><strong class="position-relative top-1">RECHERCHER</strong></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                {% if glossaires %}
+                <div class="row">
+                    <div class="col" style="margin-top: 35px;">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Terme</th>
+                                        <th>Définition</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for glossaire in glossaires %}
+                                    <tr>
+                                        <td>{{ glossaire.mot }}</td>
+                                        <td>{{ glossaire.definition|safe }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+              
+
+            </div>
+            <div class="col-lg-4">
+                {% include "_pub.html" %}
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
